@@ -17,4 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+
+        const fullTitle = "Welcome to My Portfolio";
+        let currentTitle = "";
+        let index = 0;
+
+        function typeTitle() {
+            if (index < fullTitle.length) {
+                currentTitle += fullTitle.charAt(index);
+                document.title = currentTitle; 
+                index++;
+                setTimeout(typeTitle, 150); 
+            } else {
+                
+            }
+        }
+
+        
+        window.onload = typeTitle;
 });
